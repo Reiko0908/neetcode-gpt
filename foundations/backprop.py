@@ -14,7 +14,4 @@ class Solution:
         dy_dz = y_hat * (1 - y_hat)
         dz = dL_dy * dy_dz
 
-        dL_dw = dz * x
-        dL_db = dz
-
-        return np.round(dL_dw, 5), round(float(dL_db), 5)
+        return np.round((dz * x), 5), round(float(dz), 5)
